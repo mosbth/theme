@@ -68,10 +68,6 @@ figure.right {
   font-size: 0.875em;
 }
 
-figure.clear {
-    clear: both;
-}
-
 figure.center {
   clear: both;
   
@@ -82,4 +78,10 @@ figure.center {
   figcaption {
     text-align: center;
   }
+}
+
+figure.wrap:after {
+    content:'';
+    display:block;
+    clear: both;
 }
