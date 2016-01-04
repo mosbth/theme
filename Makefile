@@ -20,16 +20,7 @@ NPM_PACKAGES = 							\
 
 build: 
 	rm -rf build
-	install -d build/css
-
-
-
-#
-# Various test to pass build
-#
-.PHONY: lint
-
-list: csslint
+	install -d build/css build/lint
 
 
 
@@ -39,7 +30,20 @@ list: csslint
 .PHONY: less
 
 less: build
-	lessc --clean-css style/style.less build/css/style.css
+	lessc style/style.less build/css/style.css
+	lessc --clean-css style/style.less build/css/style.min.css
+
+
+
+#
+# Lint
+#
+.PHONY: lint
+
+lint: less
+	lessc --lint style/style.less > build/lint/style.less
+	- csslint build/css/style.css > build/lint/style.css
+	ls -l build/lint/
 
 
 
