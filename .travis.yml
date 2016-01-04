@@ -15,7 +15,7 @@ sudo: false
 
 
 git:
-    submodules: false
+    submodules: true
 
 
 
