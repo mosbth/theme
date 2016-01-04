@@ -1,4 +1,4 @@
 Theme for websites
 ======================
 
-TBD
+[![Build Status](https://travis-ci.org/mosbth/theme.svg?branch=master)](https://travis-ci.org/mosbth/theme)
