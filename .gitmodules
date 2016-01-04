@@ -4,3 +4,6 @@
 [submodule "style/font-awesome"]
 	path = style/font-awesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "style/semantic.gs"]
+	path = style/semantic.gs
+	url = https://github.com/tylertate/semantic.gs.git
