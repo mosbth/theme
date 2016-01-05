@@ -273,11 +273,16 @@ body{
 
 }
 
+#inner-wrap-footer {
+  .wrap();
+}
+
+
 
 /** --------------------------------------------------------------
  * The footer column area.
  */
-
+/*
 #outer-wrap-footer-column {
 
 }
@@ -285,24 +290,27 @@ body{
 #inner-wrap-footer-column{
   .wrap();
 }
+*/
 
 .footer-column-wrapper {
-  margin-bottom: @magicNumber;
+    .wrap();
+    margin-bottom: @magicNumber;
 }
 
 .footer-column {
-  .column(@columns / 4);
+    .column(@columns / 3);
 }
+
 
 
 /** --------------------------------------------------------------
  * The footer area.
  */
-#inner-wrap-footer {
-  .wrap();
+#footer-site-wrapper {
+
 }
 
-#footer {
-  .column(@columns);
-  padding-top: @magicNumber / 2;
+.footer-site-wrapper {
+    .column(@columns);
+    padding-top: @magicNumber / 2;
 }
