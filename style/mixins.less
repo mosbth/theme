@@ -40,8 +40,8 @@
  * Typography. Calculate font-size and line-height.
  */
 .body-font() {
-  //font: @font-size/(@magic-number/@font-size) @@font-family-body;
-  font: 100.01%/(unit(@magicNumber)/unit(@fontSizeBody)) @fontFamilyBody;
+    //font: @font-size/@lineHeight @font-family-body;
+    font: 100.01%/@lineHeight @fontFamilyBody;
 }
 
 .font-size(@fontSize) {
