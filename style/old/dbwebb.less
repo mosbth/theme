@@ -1,0 +1,151 @@
+/** --------------------------------------------------------------
+ * Login menu
+ */
+#login-menu{
+  float: right;
+  .font-size(@fontSizeSmall);
+  .anchor-anonymous(@anchorColorAnonymous, @anchorColorAnonymousHover);
+
+  img.gravatar{
+    vertical-align: middle;
+  }
+}
+
+
+
+#ucp-navbar {
+  margin-bottom: @magicNumber;
+}
+
+
+/** ==============================================================
+ * Header below
+ */
+#outer-wrap-header-below{
+
+}
+
+#inner-wrap-header-below{
+  .wrap();
+  height: @magicNumber;
+}
+
+#header-below {
+  .column(@columns);
+  margin-bottom: @magicNumber;
+}
+
+
+
+/** ==============================================================
+ * The flash area.
+ *
+ */
+#outer-wrap-flash {
+
+}
+
+#inner-wrap-flash {
+  .wrap();
+  margin-bottom: @magicNumber;
+}
+
+#flash {
+  .column(@columns);
+}
+
+
+
+/** ==============================================================
+ * The featured area.
+ *
+ */
+#outer-wrap-featured {
+
+}
+
+#inner-wrap-featured {
+  .wrap();
+  margin-bottom: @magicNumber * 2;
+}
+
+#featured-first,
+#featured-middle,
+#featured-last {
+  .column(@columns / 3);
+  height: 100%;
+}
+
+
+
+/** ==============================================================
+ * The main content area.
+ *
+ */
+.sidebar .box {
+    margin-bottom: @magicNumber * 2;
+}
+
+
+
+/** ==============================================================
+ * The triptych area.
+ *
+ */
+#outer-wrap-triptych{
+
+}
+
+#inner-wrap-triptych {
+  .wrap();
+  margin-bottom: @magicNumber * 2;
+}
+
+#triptych {
+
+}
+
+#triptych-first,
+#triptych-middle,
+#triptych-last {
+  .column(@columns / 3);
+  height: 100%;
+}
+
+
+
+/** ==============================================================
+ * The footer before area.
+ *
+ */
+#outer-wrap-footer-before {
+
+}
+
+#outer-wrap-footer-before-left,
+#outer-wrap-footer-before-right {
+
+}
+
+#inner-wrap-footer-before {
+  .wrap();
+  margin-bottom: @magicNumber;
+}
+
+#footer-before {
+  .column(@columns);
+}
+
+
+
+/** --------------------------------------------------------------
+ * The footer area.
+ */
+#footer-site-wrapper {
+
+}
+
+.footer-site-wrapper {
+    .column(@columns);
+    padding-top: @magicNumber / 2;
+}
