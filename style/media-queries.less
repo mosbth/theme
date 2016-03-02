@@ -1,0 +1,27 @@
+/**
+ * Example on media queries
+ */
+
+
+/**
+ * For responsive navbar from navbar-responsive.less.
+ */
+@media screen and (max-width: 680px) {
+    .rm-small {
+        display: block;
+    }
+    
+    .rm-default {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .rm-small {
+        display: none;
+    }
+    
+    .rm-default {
+        display: block !important; // To override settings from js, check needed
+    }
+}
