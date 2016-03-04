@@ -111,11 +111,10 @@ body {
  *
  */
 .outer-wrap-footer {
-
 }
 
 .inner-wrap-footer {
-  .wrap();
+    .wrap();
 }
 
 .site-footer {
@@ -129,9 +128,13 @@ body {
  */
 .footer-column-wrapper {
     .wrap();
-    margin-bottom: @magicNumber;
 }
 
 .footer-column {
     .column(@columns / 3);
+}
+
+.footer-column,
+.footer-column-x {
+    height: 100%;
 }
