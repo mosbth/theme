@@ -44,14 +44,13 @@ function imageOverlay(elementId) {
      * Init navigation and add eventlisteners.
      */
     function swapOnClick(event) {
-            for (var j = 0; j < nav.length; j++) {
-                nav[j].firstChild.classList.remove("active");
-            }
-
-            this.classList.add("active");
-            swapImage(this.dataset.id);
-            event.preventDefault();
+        for (var j = 0; j < nav.length; j++) {
+            nav[j].firstChild.classList.remove("active");
         }
+
+        this.classList.add("active");
+        swapImage(this.dataset.id);
+        event.preventDefault();
     }
 
 
