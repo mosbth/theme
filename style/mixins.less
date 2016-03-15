@@ -7,16 +7,16 @@
  * The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
  */
 .clearfix() {
-   *zoom:1;
-   
-   &:before,
-   &:after {
-       content:"";
-       display:table;
-   }
-   &:after {
-       clear:both;
-   }
+    *zoom:1;
+
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
 }
 
 
@@ -25,9 +25,9 @@
  * Wrap elements to site width in grid layout
  */
 .wrap(@extra-width: 0) {
-  width: @total-width + @extra-width;
-  margin: 0 auto;
-  .clearfix();
+    width: @total-width + @extra-width;
+    margin: 0 auto;
+    .clearfix();
 }
 
 
@@ -35,8 +35,8 @@
  * Always show the scrollbar
  */
 .alwaysShowScrollbar() {
-  overflow: -moz-scrollbars-vertical;
-  overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 }
 
 
