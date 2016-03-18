@@ -73,15 +73,16 @@
   }
 }
 
-.anchor-anonymous(@color: inherit, @hover: @anchorColorHover) {
-  a {
-    color: @color;
-    text-decoration: none;
-    &:hover {
-      color: @hover;
-      text-decoration: underline;
+.anchorAnonymous(@color: inherit, @hover: @anchorColorHover) {
+    a {
+        color: @color;
+        text-decoration: none;
+
+        &:hover {
+            color: @hover;
+            text-decoration: underline;
+        }
     }
-  }
 }
 
 .anchor(@color: inherit, @hover: inherit, @visited: inherit) {
