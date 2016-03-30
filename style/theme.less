@@ -86,27 +86,33 @@ body {
 }
 
 .main {
-    .column(@columns);
+    .column(@columns * 3 / 4 - 2);
+    .push(2);
 
-    &.has-sidebar {
-        .column(@columns * 2 / 3);
+    &.has-sidebar-left {
+        //.column(@columns * 3 / 4 - 2);
+        .push(1);
     }
 
-    &.sidebar-right&.sidebar-left {
-        .column(@columns * 3 / 4);
+    &.has-sidebar-right {
+        //.column(@columns * 3 / 4 - 2);
+        .push(0);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        .column(@columns * 2 / 4 + 2);
+        .push(0);
     }
 }
 
 .sidebar-right,
 .sidebar-left {
-    .column(@columns / 3 - 1);
+    .column(@columns / 4);
 }
 
-.sidebar-right&.sidebar-left {
-    .column(@columns * 1 / 4);
+.sidebar-right {
+    .push(1);
 }
-
-
 
 
 
