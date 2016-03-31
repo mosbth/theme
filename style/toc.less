@@ -6,6 +6,8 @@
 /** ------------------------------------------------------------------ 
  * toc in column
  */
+@tocColor: #eee;
+
 .toc {
     list-style: none; 
     margin: 0; 
@@ -34,18 +36,13 @@
 
     .section-header {
         font-weight: bold;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid @tocColor;
         margin-top: @magicNumber;
         margin-bottom: @magicNumber / 2;
     }
-}
 
-/*
-.level-1 {
-    padding-left: 0.5em;
+    .selected {
+        background-color: @tocColor;
+        font-style: italic;
+    }
 }
-
-.level-2 {
-    padding-left: 0.5em;
-}
-*/
