@@ -1,0 +1,21 @@
+/** --------------------------------------------------------------
+ * Anchor for headers with id
+ */
+@colorAnchorHeader: #ccc;
+
+h2:hover .header-anchor {
+    display: block;    
+}
+
+.header-anchor {
+    display: none;    
+    position: relative;
+    float: right;
+    color: @colorAnchorHeader;
+    margin-left: -1em;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
