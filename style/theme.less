@@ -126,12 +126,12 @@ body {
     .push(2);
 
     &.has-sidebar-left {
-        //.column(@columns * 3 / 4 - 2);
+        .column(@columns * 3 / 4 - 2);
         .push(1);
     }
 
     &.has-sidebar-right {
-        //.column(@columns * 3 / 4 - 2);
+        .column(@columns * 3 / 4 - 2);
         .push(0);
     }
 
@@ -143,7 +143,7 @@ body {
 
 .sidebar-right,
 .sidebar-left {
-    .column(@columns / 4);
+    .column(@columns / 4 + 1);
 }
 
 .sidebar-right {
