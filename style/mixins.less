@@ -44,9 +44,9 @@
 /** ------------------------------------------------------------------ 
  * Typography. Calculate font-size and line-height.
  */
-.body-font() {
+.body-font(@fontSize: 100.01%) {
     //font: @font-size/@lineHeight @font-family-body;
-    font: 100.01%/@lineHeight @fontFamilyBody;
+    font: @fontSize/@lineHeight @fontFamilyBody;
 }
 
 .font-size(@fontSize) {

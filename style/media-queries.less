@@ -3,9 +3,72 @@
  */
 
 
+ /**
+  * For main content.
+  */
+@media screen and (max-width: 768px) {
+    body {
+        //background-color: pink;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .wrap-all {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .main {
+        .column(@columns);
+        .push(0);
+
+        &.has-sidebar-left {
+            .column(@columns);
+            .push(0);
+        }
+
+        &.has-sidebar-right {
+            .column(@columns);
+            .push(0);
+        }
+
+        &.has-sidebar-left.has-sidebar-right {
+            .column(@columns);
+            .push(0);
+        }
+    }
+
+    .sidebar-right,
+    .sidebar-left {
+        display: none;
+    }
+
+
+
+    .footer-column {
+        .column(@columns);
+    }
+
+    .footer-column-1,
+    .footer-column-2 {
+        border-right: none;
+    }
+
+    .footer-column-2,
+    .footer-column-3 {
+        padding-left: 0;
+    }
+}
+
+
+
+
 /**
  * For responsive navbar from navbar-responsive.less.
  */
+ /*
 @media screen and (max-width: 680px) {
     .rm-small {
         display: block;
@@ -25,3 +88,4 @@
         display: block !important; // To override settings from js, check needed
     }
 }
+*/
