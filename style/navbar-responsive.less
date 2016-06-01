@@ -1,55 +1,45 @@
 /**
- * Style for responsive menu with variables in variables.less.
- *
- * @link: https://github.com/mosbth/responsive-menu
+ * Style for responsive menu
  */
 
- /** --------------------------------------------------------------
-  * Variables for responsive menu in navbar-responsive.less.
-  */
+// General
+@navbarBgColor:             #444;
+@navbarItemColor:           #eee;
+@navbarItemHoverColor:      lime;
+@navbarItemHoverBgColor:    #666;
 
- // General
- @navbarBgColor:             #444;
- @navbarItemColor:           #eee;
- @navbarItemHoverColor:      lime;
- @navbarItemHoverBgColor:    #666;
+// Menu item current/selected
+@navbarItemSelectedColor:       darken(lime, 10%); 
+@navbarItemSelectedBgColor:     #666; 
+@navbarItemSelectedBorderColor: darken(lime, 10%);
 
- // Menu item current/selected
- @navbarItemSelectedColor:       darken(lime, 10%); 
- @navbarItemSelectedBgColor:     #666; 
- @navbarItemSelectedBorderColor: darken(lime, 10%);
+// Mobile button
+@navbarMobileBorderColor:               #ddd;
+@navbarMobileItemBorderColor:           #eee;
+@navbarMobileItemHoverBorderColor:      lime;
 
- // Mobile button
- @navbarMobileBorderColor:               #ddd;
- @navbarMobileItemBorderColor:           #eee;
- @navbarMobileItemHoverBorderColor:      lime;
+// The menu button
+@navbarMenuButtonColor:         #333;
+@navbarMenuButtonBgColor:       transparent;
+@navbarMenuButtonBorderColor:   #999;
 
- // The menu button
- @navbarMenuButtonColor:         #333;
- @navbarMenuButtonBgColor:       transparent;
- @navbarMenuButtonBorderColor:   #999;
+// The menu button hover
+@navbarMenuButtonHoverColor:         lime;
+@navbarMenuButtonHoverBgColor:       #eee;
+@navbarMenuButtonHoverBorderColor:   #333;
 
- // The menu button hover
- @navbarMenuButtonHoverColor:         lime;
- @navbarMenuButtonHoverBgColor:       #eee;
- @navbarMenuButtonHoverBorderColor:   #333;
+// The menu clicked
+@navbarMenuButtonClickedBorderColor:    lime;
+@navbarMenuButtonClickedColor:          #666;
+@navbarMenuButtonClickedBgColor:        #eee;
 
- // The menu clicked
- @navbarMenuButtonClickedBorderColor:    lime;
- @navbarMenuButtonClickedColor:          #666;
- @navbarMenuButtonClickedBgColor:        #eee;
-
- // Submenu
- @submenuZIndex:             9999;
- @submenuBgColor:            @navbarBgColor;
- @submenuMinWidth:           10em;
- @submenuItemBorderColor:    #eee;
+// Submenu
+@submenuZIndex:             9999;
+@submenuBgColor:            @navbarBgColor;
+@submenuMinWidth:           10em;
+@submenuItemBorderColor:    #eee;
 
 
-
-/** --------------------------------------------------------------
- * Wrapper layout.
- */
 .rm-navbar {
 
     position: relative;
@@ -157,6 +147,7 @@ a.rm-button {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop {
+    float: right;
 
     li {
         // Selected/current menu item

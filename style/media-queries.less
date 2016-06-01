@@ -6,21 +6,82 @@
  /**
   * For main content.
   */
-@media screen and (max-width: 768px) {
-    body {
-        //background-color: pink;
+@media screen and (min-width: 1100px) {
+      .site-logo-text-icon img {
+          display: none;
+      }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .site-logo-text-icon img {
+        display: inline;
+    }
+
+    .logo-1 {
+        display: none;
     }
 }
+
+
+
+@media screen and (max-width: 960px) {
+    .outer-wrap-header {
+        border-top: none;
+        margin-bottom: 0;
+    }
+
+    .site-logo-text {
+        padding-left: 8px;
+    }
+
+    .navbar2 {
+        //padding-right: 8px;
+    }
+
+    .inner-wrap-flash {
+        margin-bottom: 0;
+    }
+
+    .figure figcaption {
+        padding: 0 4px;
+        padding-top: 4px;
+    }
+}
+
 
 
 @media screen and (max-width: 768px) {
 
     .wrap-all {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        //padding-left: 4px;
+        //padding-right: 4px;
+    }
+    
+    .outer-wrap-header {
+        border-bottom: none;
+    }
+    
+    .inner-wrap-main {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .rm-default {
+        top: 6px;
+
+        a {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            //border-bottom-width: 2px;
+            //border-bottom-style: solid;
+        }
     }
 
     .main {
+        min-height: initial;
+        
         .column(@columns);
         .push(0);
 
@@ -45,8 +106,6 @@
         display: none;
     }
 
-
-
     .footer-column {
         .column(@columns);
     }
@@ -60,15 +119,26 @@
     .footer-column-3 {
         padding-left: 0;
     }
+    
+    .fa-4x {
+        font-size: 2em;
+    }
 }
 
 
 
+@media screen and (max-width: 540px) {
+    .rm-default a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
+
+
 
 /**
- * For responsive navbar from navbar-responsive.less.
+ * Example on media queries
  */
- /*
 @media screen and (max-width: 680px) {
     .rm-small {
         display: block;
@@ -85,7 +155,6 @@
     }
     
     .rm-default {
-        display: block !important; // To override settings from js, check needed
+        /*display: block !important;*/ // To override settings from js, check needed
     }
 }
-*/

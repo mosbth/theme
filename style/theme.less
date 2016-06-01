@@ -83,9 +83,10 @@ body {
 
 
 /** --------------------------------------------------------------
-* Columns above main
+* Columns above and below main
 */
-.inner-wrap-columns-above {
+.inner-wrap-columns-above,
+.inner-wrap-columns-below {
     .wrap();
 }
 
@@ -94,16 +95,23 @@ body {
 /** --------------------------------------------------------------
  * General column elements.
  */
-.col4-wrapper {
+.columns {
     .clearfix();
+}
+
+.col2 {
+    .column(@columns / 2);
+}
+
+.col3 {
+    .column(@columns / 3);
 }
 
 .col4 {
     .column(@columns / 4);
 }
 
-.col4,
-.col4-x {
+.column {
     height: 100%;
 }
 
