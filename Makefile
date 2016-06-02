@@ -48,6 +48,15 @@ lint: less
 
 
 #
+# Test
+#
+.PHONY: test
+
+test: lint
+
+
+
+#
 # npm
 #
 .PHONY: npm-config npm-installl npm-update
