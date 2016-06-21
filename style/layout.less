@@ -1,0 +1,181 @@
+/** 
+ * Structure for regions, rows and columns.
+ *
+ */
+
+
+/** ==============================================================
+ * Base
+ */
+html {
+    overflow-y: scroll;  // Always show scrollbar to avoid flickr
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap-all {
+    //.showGrid(1100px);
+}
+
+.outer-wrap {
+    
+}
+
+.inner-wrap {
+    .container();
+    max-width: 1100px;
+}
+
+.row {
+    .row();
+}
+
+
+
+/** ==============================================================
+ * Header 
+ */
+.site-header {
+
+}
+
+
+
+/** --------------------------------------------------------------
+ * Navbar(s)
+ */
+.navbar1 {
+    .column(@columns);
+}
+
+.navbar2 {
+
+}
+
+
+
+/** --------------------------------------------------------------
+ * Breadcrumb
+ */
+.breadcrumb {
+    .column(@columns);
+}
+
+
+
+/** --------------------------------------------------------------
+ * Flash area
+ */
+.flash {
+    .column(@columns);
+}
+
+
+
+/** --------------------------------------------------------------
+* Columns above and below main
+*/
+.columns-above,
+.columns-below {
+
+}
+
+
+
+/** --------------------------------------------------------------
+ * General column elements.
+ */
+.columns {
+    //.clearfix();
+    overflow: auto;
+}
+
+.col2 {
+    .column(@columns / 2);
+}
+
+.col3 {
+    .column(@columns / 3);
+}
+
+.col4 {
+    .column(@columns / 4);
+}
+
+.column {
+    height: 100%;
+}
+
+
+
+/** ==============================================================
+ * The main content area.
+ *
+ */
+.outer-wrap-main {
+
+}
+
+.inner-wrap-main {
+
+}
+
+.main {
+    .column(@columns * 3 / 4 - 2);
+    .push(2);
+
+    &.has-sidebar-left {
+        .column(@columns * 3 / 4 - 2);
+        .push(1);
+    }
+
+    &.has-sidebar-right {
+        .column(@columns * 3 / 4 - 2);
+        .push(0);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        .column(@columns * 2 / 4 + 2);
+        .push(0);
+    }
+}
+
+.sidebar-right,
+.sidebar-left {
+    .column(@columns / 4 + 1);
+}
+
+.sidebar-right {
+    .push(1);
+}
+
+
+
+/** ==============================================================
+ * The footer area.
+ *
+ */
+.site-footer {
+    .column(@columns);
+}
+
+
+
+/** --------------------------------------------------------------
+ * The footer column area.
+ */
+.footer-column-wrapper {
+    .clearfix();
+}
+
+.footer-column {
+    .column(@columns / 3);
+}
+
+.footer-column,
+.footer-column-x {
+    height: 100%;
+}

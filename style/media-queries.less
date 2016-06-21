@@ -127,10 +127,24 @@
 
 
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 780px) {
+    // Make menu less wide
     .rm-default a {
         padding-left: 0.5em;
         padding-right: 0.5em;
+    }
+}
+
+
+
+@media screen and (max-width: 680px) {
+    // Swap header size when menu is small
+    .site-logo-text {
+        .column(16);
+    }
+
+    .navbar2 {
+        .column(8);
     }
 }
 
@@ -152,9 +166,5 @@
 @media screen and (min-width: 680px) {
     .rm-small {
         display: none;
-    }
-    
-    .rm-default {
-        /*display: block !important;*/ // To override settings from js, check needed
     }
 }
