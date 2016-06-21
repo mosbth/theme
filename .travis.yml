@@ -68,7 +68,7 @@ script:
     
     # Run validation & publish
     - composer validate
-    - make lint
+    - make test
     #- make phpcs
 
 
