@@ -1,8 +1,10 @@
 /** --------------------------------------------------------------
  * Breadcrumb
  */
-.breadcrumb {
+.breadcrumb-list,
+.bullet-list {
     margin-bottom: @magicNumber;
+    .fontSize(@fontSizeSmall);
 
     ul {
         margin: 0;
@@ -18,6 +20,18 @@
 
         &::after {
             content: " » ";
+        }
+    }
+}
+
+.bullet-list {
+    li {
+        &::after {
+            content: " • ";
+        }
+
+        &:last-child::after {
+            content: "";
         }
     }
 }

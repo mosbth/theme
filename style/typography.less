@@ -4,11 +4,20 @@
 // Monospace
 @fontFamilyCourier:         "Courier New", Courier, monospace;
 @fontFamilyMonospace:       monospace;
+//@fontFamilyMonospace:       "Liberation Mono", "Nimbus Mono L", "FreeMono", "DejaVu Mono", "Bitstream Vera Mono", "Lucida Console", "Andale Mono", "Courier New", monospace;
 
 // Serif
-@fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+@fontFamilyCambria:         Cambria, Georgia, serif;
+//@fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
 @fontFamilyTimes:           Times, 'Times New Roman', serif;
+@fontFamilyTimesNewRoman:   'Times New Roman', Times, serif;
 @fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+@fontFamilyCalistoMT:       Calisto MT, Bookman Old Style, Bookman, Goudy Old Style, Garamond, Hoefler Text, Bitstream Charter, Georgia, serif;
+@fontFamilyLucidaBright:    Lucida Bright, Georgia, serif;
+@fontFamilyWideSerif:       "DejaVu Serif", "Bitstream Vera Serif", "Century Schoolbook L", "Lucida Bright", Georgia, serif;
+@fontFamilyNarrowSerif:     "Liberation Serif", "Nimbus Roman No 9 L",  "FreeSerif", "Hoefler Text", Times, "Times New Roman", serif;
+@fontFamilyAntiqueSerif:    "Bitstream Charter", "URW Palladio L", Palatino, "Palatino Linotype", "Book Antiqua", serif;
+@fontFamilyPalatino:        "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
 // Sans-serif
 @fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -16,14 +25,18 @@
 @fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 @fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
 @fontFamilyArial:           Arial, sans-serif;
-
+@fontFamilyWideSansSerif:   "DejaVu Sans", "Bitstream Vera Sans", Geneva, Verdana, sans-serif;
+@fontFamilyWideNarrowSerif: "Liberation Sans", "Nimbus Sans L", "FreeSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyVerdana:         Verdana, Geneva, sans-serif;
 
 
 /**
  * Default font-families
  */
-@fontFamilyHeadings:  @fontFamilyCambria;
-@fontFamilyBody:      @fontFamilyCalibri;
+@fontFamilyHeadings:  @fontFamilyPalatino;
+@fontWeightHeadings:  300; //normal;
+
+@fontFamilyBody:      @fontFamilyVerdana;
 @fontFamilyCode:      @fontFamilyCourier;
 
 
@@ -48,9 +61,9 @@
 @fontSizeH5: 1em;
 @fontSizeH6: 0.875em;
 
-@fontSizeCodeInline:  1.25em;
-@fontSizeCodeBlock:   1.25em;
-@lineHeightCodeBlock: 1.6;
+@fontSizeCodeInline:  1em; //1.25em;
+@fontSizeCodeBlock:   1em; //1.25em;
+@lineHeightCodeBlock: @lineHeight;
 
 @fontSizeSupSub: 0.75em;
 
@@ -139,8 +152,11 @@
 .typographyHeadings() {
     h1, h2, h3, h4, h5, h6 {
         font-family: @fontFamilyHeadings;
-        margin-top: @magicNumber;
+        font-weight: @fontWeightHeadings;
+
+        margin-top: 0;
         margin-bottom: @magicNumber;
+
         img {
             margin: 0;
         }
@@ -148,7 +164,6 @@
 
     h1 {
         .fontSize(@fontSizeH1);
-        font-weight: normal;
 
         border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
         margin-bottom: @magicNumber - @borderSizeH1;
@@ -172,13 +187,10 @@
 
     h2 {
         .fontSize(@fontSizeH2);
-        font-weight: normal;
-
-        margin-top: @magicNumber * 2;
         margin-bottom: @magicNumber - @borderSizeH2;
-
         border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
 
+        // Single margin when subheader follows directly
         & + h3 {
             margin-top: @magicNumber;
         }
@@ -186,12 +198,10 @@
 
     h3 {
         .fontSize(@fontSizeH3);
-        font-weight: normal;
     }
 
     h4 {
         .fontSize(@fontSizeH4);
-        font-weight: normal;
     }
 
     h5 {
@@ -216,7 +226,7 @@
 
 .typographyTextElements() {
     p {
-        margin-top: @magicNumber;
+        margin-top: 0;
         margin-bottom: @magicNumber;
     }
 
@@ -281,6 +291,7 @@
 @bgColorCodeBlock:      #eee;
 @colorCodeBlockBorder:  #ccc;
 @borderSizeCodeblock:   1px;
+@borderColorCodeblock:  #ccc;
 
 .typographyCodeElements() {
     pre,
@@ -289,7 +300,8 @@
     samp,
     .code {
         font-size: @fontSizeCodeInline;
-        font-family: @fontFamilyMonospace;
+        line-height: 1;
+        font-family: @fontFamilyCode;
     }
 
     code,
@@ -301,34 +313,29 @@
         background-color: @bgColorCodeInline;
     }
 
+    pre {
+        margin-top: 0;
+        margin-bottom: @magicNumber;
+    }
+
     pre,
     div.code,
-    pre code {
+    pre.hljs {
         font-size: @fontSizeCodeBlock;
         line-height: @lineHeightCodeBlock;
         white-space: pre;
     }
 
-    pre {
-        margin-top: @magicNumber;
-        margin-bottom: @magicNumber;
-    }
-
-    pre code {
-        display: block;
-        overflow: auto;
-    }
-
     div.code,
-    pre code {
+    pre.hljs {
         border-top:    @borderSizeCodeblock solid @colorCodeBlockBorder;
         border-bottom: @borderSizeCodeblock solid @colorCodeBlockBorder;
 
-        margin-top:    @magicNumber - @borderSizeCodeblock;
-        margin-bottom: @magicNumber - @borderSizeCodeblock;
+        margin-top:    0;
+        margin-bottom: @magicNumber - @borderSizeCodeblock * 2;
 
-        padding-top:    @magicNumber / 2;
-        padding-bottom: @magicNumber / 2;
+        //padding-top:    @magicNumber / 2;
+        //padding-bottom: @magicNumber / 2;
         padding-left: 0.5em;
 
         background-color: @bgColorCodeBlock;
@@ -345,7 +352,7 @@
 
     ul, 
     ol {
-        margin-top:    @magicNumber;
+        margin-top:    0;
         margin-bottom: @magicNumber;
         padding-left: 1.5em;
 
@@ -370,7 +377,7 @@
 
     // dl dt dd
     dl {
-        margin-top:    @magicNumber;
+        margin-top:    0;
         margin-bottom: @magicNumber;
 
         &.horizontal {
@@ -404,7 +411,7 @@
  * Tables. Because of the need for padding on TH and TD, the vertical rhythm
  * on table cells has to be 1.5*@magic-number.
  */
-@colorTableHeaderBorder:    #aaa;
+@colorTableHeaderBorder:    #666;
 @sizeTableHeaderBorder:     2px;
 
 @bgColorTableStripe:        #fafafa;
@@ -423,7 +430,7 @@
     .table,
     .table1,
     .table2 {
-        margin-top:    @magicNumber;
+        margin-top:    0;
         margin-bottom: @magicNumber;
     }
 
@@ -447,7 +454,7 @@
         }
 
         thead { 
-            box-shadow:  0 1px 0 @colorTableHeaderBorder;
+            box-shadow:  0 @sizeTableHeaderBorder 0 @colorTableHeaderBorder;
         }
 
         th {

@@ -111,3 +111,12 @@
 .pull-right(@offset: 1) {
     margin-right: -1 * @totalWidth * @offset * (@gutterWidth + @columnWidth) + @totalWidth * @gutterWidth / 2;
 }
+
+
+
+/**
+ * Make empty space after column.
+ */
+.space(@col: 1) {
+    margin-right: @totalWidth * @col * (@gutterWidth + @columnWidth) + @totalWidth * @gutterWidth / 2;
+}
