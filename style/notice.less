@@ -5,17 +5,30 @@
 @infoBackgroundColor: #d5edf8;
 @infoBorderColor: #92cae4;
 
+@warningColor: #3f3f0e;
+@warningBackgroundColor: #ededab;
+@warningBorderColor: #d1d12e;
 
-.info {
-    padding: 0 0.5em;
+
+.info,
+.warning {
+    padding: 0.5em;
     margin-bottom: @magicNumber - 2 * 2;
-    border: 2px solid @infoBorderColor;
-
-    color: @infoColor;
-    background: @infoBackgroundColor;
 
     .icon {
         float: right;
-        padding: 0.5em 0 0.5em 0.5em;
+        padding: 0 0 0.5em 0.5em;
     }
+}
+
+.info {
+    border: 2px solid @infoBorderColor;
+    color: @infoColor;
+    background: @infoBackgroundColor;
+}
+
+.warning {
+    border: 2px solid @warningBorderColor;
+    color: @warningColor;
+    background: @warningBackgroundColor;
 }
