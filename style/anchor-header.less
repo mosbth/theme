@@ -2,6 +2,7 @@
  * Anchor for headers with id
  */
 @colorAnchorHeader: #ccc;
+@colorLightAnchorHeader: #ddd;
 
 h2:hover .header-anchor,
 h3:hover .header-anchor,
@@ -19,5 +20,12 @@ h4:hover .header-anchor {
     
     &:hover {
         text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header-anchor {
+        display: block;
+        color: @colorLightAnchorHeader;
     }
 }
