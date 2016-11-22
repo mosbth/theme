@@ -6,6 +6,7 @@
  /**
   * For main content.
   */
+/*
 @media screen and (max-width: 960px) {
     .outer-wrap-header {
         border-top: none;
@@ -30,8 +31,9 @@
     }
 }
 
+*/
 
-
+/*
 @media screen and (max-width: 768px) {
 
     .outer-wrap-header {
@@ -46,22 +48,22 @@
     .main {
         min-height: initial;
         
-        .column(@columns);
-        .push(0);
+        #vgrid .column(@columns);
+        #vgrid .push(0);
 
         &.has-sidebar-left {
-            .column(@columns);
-            .push(0);
+            #vgrid .column(@columns);
+            #vgrid .push(0);
         }
 
         &.has-sidebar-right {
-            .column(@columns);
-            .push(0);
+            #vgrid .column(@columns);
+            #vgrid .push(0);
         }
 
         &.has-sidebar-left.has-sidebar-right {
-            .column(@columns);
-            .push(0);
+            #vgrid .column(@columns);
+            #vgrid .push(0);
         }
     }
 
@@ -71,11 +73,11 @@
     }
 
     .col3 {
-        .column(@columns);
+        #vgrid .column(@columns);
     }
 
     .col4 {
-        .column(@columns / 2);
+        #vgrid .column(@columns / 2);
     }
 
     .footer-column-wrapper,
@@ -84,7 +86,7 @@
     }
 
     .footer-column {
-        .column(@columns);
+        #vgrid .column(@columns);
     }
 
     .footer-column-x {
@@ -107,25 +109,27 @@
         font-size: 2em;
     }
 }
+*/
 
-
+/*
 
 @media screen and (max-width: 680px) {
     // Swap header size when menu is small
     .site-logo-text {
-        .column(16);
+        #vgrid .column(16);
     }
 
     .navbar2 {
-        .column(8);
+        #vgrid .column(8);
     }
 }
 
 
 
 /**
- * Example on media queries
+ * Example on media queries MOVE TO SPECIFIC
  */
+/*
 @media screen and (max-width: 680px) {
     .rm-small {
         display: block;
@@ -141,3 +145,4 @@
         display: none;
     }
 }
+*/
